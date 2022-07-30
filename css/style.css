@@ -1,0 +1,44 @@
+/* Bootstrap */
+.dropdown-toggle::after {
+    color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
+/* Custom */
+html {
+    overflow-x: hidden !important;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.fs-50 {
+    font-size: 50px;
+}
+
+.fs-70 {
+    font-size: 70px;
+}
+
+.logo-border {
+    border-bottom: 4px solid rgba(var(--bs-success-rgb), var(--bs-text-opacity));
+}
+
+.icon-eye {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.btn-height {
+    height: calc(3.5rem + 2px);
+}
+
+/* Hover */
+.green-hover:hover {
+    color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}

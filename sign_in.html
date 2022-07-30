@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="./lib/bootstrap5/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./lib/sweetalert2/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS -->
+    <script src="./lib/bootstrap5/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/sweetalert2/node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="./lib/jquery-mask/dist/jquery.mask.min.js"></script>
+
+    <title>ListIt</title>
+</head>
+
+<body class="bg-dark">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-1 text-light me-lg-5 logo-border green-hover" href="index.html">ListIt
+                    <i class="fa-solid fa-check fs-1 text-success"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" aria-current="page" href="index.html"><span
+                                class="text-light green-hover">Home</span>
+                            <i class="fa-solid fa-house text-success fs-6"></i></a>
+                        <a class="nav-link" href="new_list.html"><span class="text-light green-hover">New list</span> <i
+                                class="fa-solid fa-plus text-success fs-6"></i></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light green-hover" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="green-hover">My lists</span>
+                            </a>
+                            <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light green-hover" href="my_list.html">Market</a></li>
+                                <li><a class="dropdown-item text-light green-hover" href="my_list.html">Room</a></li>
+                                <li><a class="dropdown-item text-light green-hover" href="my_list.html">Petshop</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" aria-current="page" href="sign_in.html"><span
+                                class="text-light green-hover">Sign
+                                in</span></a>
+                        <a class="nav-link" aria-current="page" href="log_in.html"><span
+                                class="text-light green-hover">Log
+                                in</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 mt-5 mx-auto text-start">
+                    <span class="text-light fs-50">Sign in</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 mx-auto">
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="name">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 mx-auto">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 mx-auto">
+                    <div class="form-floating mb-3">
+                        <i class="fa-solid fa-eye icon-eye d-none fs-5 text-success cursor-pointer" id="open_eye"></i>
+                        <i class="fa-solid fa-eye-slash icon-eye d-block fs-5 text-success cursor-pointer"
+                            id="close_eye"></i>
+                        <input type="password" class="form-control" id="password" placeholder="name@example.com">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 mx-auto">
+                    <div class="form-floating mb-3">
+                        <i class="fa-solid fa-eye icon-eye d-none fs-5 text-success cursor-pointer" id="open_eye2"></i>
+                        <i class="fa-solid fa-eye-slash icon-eye d-block fs-5 text-success cursor-pointer"
+                            id="close_eye2"></i>
+                        <input type="password" class="form-control" id="confirm_password"
+                            placeholder="name@example.com">
+                        <label for="confirm_password">Confirm password</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4 mx-auto">
+                    <button type="button" class="btn btn-height btn-success text-light w-100 fs-5 fw-bold">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-success fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col text-end">
+                    <span class="text-light">® 2022 ListIt. All rights reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide password
+        $("#close_eye").on('click', function () {
+            $("#close_eye").removeClass("d-block");
+            $("#close_eye").addClass("d-none");
+            $("#open_eye").removeClass("d-none");
+            $("#open_eye").addClass("d-block");
+            $("#password").attr("type", "text");
+        });
+        $("#open_eye").on('click', function () {
+            $("#open_eye").removeClass("d-block");
+            $("#open_eye").addClass("d-none");
+            $("#close_eye").removeClass("d-none");
+            $("#close_eye").addClass("d-block");
+            $("#password").attr("type", "password");
+        });
+        $("#close_eye2").on('click', function () {
+            $("#close_eye2").removeClass("d-block");
+            $("#close_eye2").addClass("d-none");
+            $("#open_eye2").removeClass("d-none");
+            $("#open_eye2").addClass("d-block");
+            $("#confirm_password").attr("type", "text");
+        });
+        $("#open_eye2").on('click', function () {
+            $("#open_eye2").removeClass("d-block");
+            $("#open_eye2").addClass("d-none");
+            $("#close_eye2").removeClass("d-none");
+            $("#close_eye2").addClass("d-block");
+            $("#confirm_password").attr("type", "password");
+        });
+    </script>
+
+</body>
+
+</html>
