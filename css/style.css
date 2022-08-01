@@ -38,7 +38,18 @@ body {
     height: calc(3.5rem + 2px);
 }
 
+.spacer {
+    height: 80px !important;
+}
+
 /* Hover */
 .green-hover:hover {
     color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+}
+
+/* Media */
+@media (min-width: 990px) {
+    .fs-lg-50 {
+        font-size: 50px !important;
+    }
 }
